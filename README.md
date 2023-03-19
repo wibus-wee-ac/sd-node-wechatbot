@@ -39,11 +39,19 @@ sd-node-wechatbot 是一个用于微信中的机器人，旨在为Stable Diffusi
 { "api": "http://localhost:8080" }
 ```
 
-## Author
+### 使用
 
-SD-WeChatBot © Wibus, Released under AGPLv3. Created on Mar 19, 2023
+1. 安装依赖
 
-> [Personal Website](http://iucky.cn/) · [Blog](https://blog.iucky.cn/) · GitHub [@wibus-wee](https://github.com/wibus-wee/) · Telegram [@wibus✪](https://t.me/wibus_wee)
+```bash
+pnpm install
+```
+
+2. 启动
+
+```bash
+pnpm build && node dist/index.cjs
+```
 
 ## License
 
