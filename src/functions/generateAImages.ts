@@ -1,8 +1,10 @@
 import { FileBox } from "file-box";
+import { writeFileSync } from "fs";
 import { ofetch } from "ofetch";
 import { Message } from "wechaty";
 import { SD_APIS } from "../constants/apis";
 import { ITxt2Img, ITxt2ImgSuccess } from "../types/txt2img";
+import { getConfig } from "../utils/get-config";
 import { Command } from "../utils/parse-commands";
 import { url } from "../utils/url";
 
@@ -59,6 +61,7 @@ export async function generateAiImages(command: Command, msg: Message) {
     }).then((res) => {
       res.images.forEach((image) => {
         images.push(image);
+        msg.say(FileBox.fromBase64(image, `image-${i}.png`));
       });
     });
   }
@@ -67,8 +70,11 @@ export async function generateAiImages(command: Command, msg: Message) {
   //   await msg.say(FileBox.fromBase64(image));
   // });
 
-  for (let i = 0; i < images.length; i++) {
-    await msg.say(FileBox.fromBase64(images[i], `image-${i}.png`));
+  if (getConfig("saveImages")) {
+    for (let i = 0; i < images.length; i++) {
+      const time = new Date().getTime();
+      writeFileSync(`./images/${time}-${i}.png`, images[i], "base64");
+    }
   }
 
   await msg.say(`🎉 图片生成完毕！`);

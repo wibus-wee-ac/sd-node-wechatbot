@@ -53,6 +53,19 @@ pnpm install
 pnpm build && node dist/index.cjs
 ```
 
+### config.json 配置项
+
+#### `api`
+
+- 类型：`string`
+- 描述：Stable Diffusion 实例地址
+
+
+#### `saveImages`
+
+- 类型：`boolean`
+- 描述：生成图片后是否保存到本地
+
 ## License
 
 此项目 AGPLv3 授权开源，使用此项目进行的二次创作或者衍生项目也必须开源。
