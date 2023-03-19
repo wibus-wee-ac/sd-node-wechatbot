@@ -1,0 +1,84 @@
+{
+  "name": "project-name",
+  "version": "0.0.0",
+  "description": "project-desc",
+  "author": "wibus-wee <wibus@qq.com>",
+  "license": "AGPLv3",
+  "homepage": "https://github.com/wibus-wee/project-name#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wibus-wee/project-name.git"
+  },
+  "issues": "https://github.com/wibus-wee/project-name/issues",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --ignore-path ./.prettierignore --write ",
+      "eslint --cache --fix"
+    ]
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "prepublishOnly": "pnpm build",
+    "release": "bumpp && npm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@innei-util/eslint-config-ts": "0.8.2",
+    "@innei-util/prettier": "0.8.2",
+    "@innei/eslint-config-ts": "0.9.8",
+    "@types/node": "18.15.3",
+    "@types/qrcode-terminal": "^0.12.0",
+    "bumpp": "9.0.0",
+    "eslint": "8.36.0",
+    "esno": "0.16.3",
+    "husky": "8.0.3",
+    "lint-staged": "13.2.0",
+    "pnpm": "7.29.3",
+    "prettier": "2.8.4",
+    "rimraf": "4.4.0",
+    "typescript": "5.0.2",
+    "unbuild": "1.1.2",
+    "vite": "4.2.0",
+    "vitest": "0.29.3"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "file-box": "^1.4.15",
+    "ofetch": "^1.0.1",
+    "qrcode-terminal": "^0.12.0",
+    "wechaty": "^1.20.2",
+    "wechaty-puppet-wechat": "^1.18.4"
+  }
+}
