@@ -20,13 +20,15 @@ export async function generateAiImages(command: Command, msg: Message) {
   cfg = cfg || "7";
 
   /* prettier-ignore */
-  await msg.say(`🪅 正在生成图片...
-正向提示词: ${prompts.substring(0, 20)}...
-负向提示词: ${negative.substring(0, 20)}...
-图片大小: ${size}
-步数: ${steps}
-图片数量: ${count}
-配置: ${cfg}`);
+//   await msg.say(`🪅 正在生成图片...
+// 正向提示词: ${prompts.substring(0, 20)}...
+// 负向提示词: ${negative.substring(0, 20)}...
+// 图片大小: ${size}
+// 步数: ${steps}
+// 图片数量: ${count}
+// 配置: ${cfg}`);
+
+  await msg.say(`🪅 正在生成图片...`);
 
   if (networks) {
     const networksArr = networks.split(",");
