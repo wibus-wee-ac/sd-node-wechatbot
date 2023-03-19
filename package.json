@@ -1,15 +1,14 @@
 {
-  "name": "project-name",
+  "name": "sd-node-wechatbot",
   "version": "0.0.0",
-  "description": "project-desc",
   "author": "wibus-wee <wibus@qq.com>",
   "license": "AGPLv3",
-  "homepage": "https://github.com/wibus-wee/project-name#readme",
+  "homepage": "https://github.com/wibus-wee/sd-node-wechatbot#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wibus-wee/project-name.git"
+    "url": "git+https://github.com/wibus-wee/sd-node-wechatbot.git"
   },
-  "issues": "https://github.com/wibus-wee/project-name/issues",
+  "issues": "https://github.com/wibus-wee/sd-node-wechatbot/issues",
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --ignore-path ./.prettierignore --write ",
