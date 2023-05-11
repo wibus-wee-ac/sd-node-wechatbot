@@ -70,7 +70,7 @@
     "typescript": "5.0.4",
     "unbuild": "1.1.2",
     "vite": "4.2.0",
-    "vitest": "0.29.3"
+    "vitest": "0.29.8"
   },
   "dependencies": {
     "chalk": "^5.2.0",
