@@ -67,7 +67,7 @@
     "pnpm": "7.29.3",
     "prettier": "2.8.4",
     "rimraf": "4.4.0",
-    "typescript": "5.0.2",
+    "typescript": "5.0.4",
     "unbuild": "1.1.2",
     "vite": "4.2.0",
     "vitest": "0.29.3"
