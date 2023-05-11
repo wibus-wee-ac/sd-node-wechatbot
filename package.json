@@ -56,7 +56,7 @@
   "devDependencies": {
     "@innei-util/eslint-config-ts": "0.8.2",
     "@innei-util/prettier": "0.8.2",
-    "@innei/eslint-config-ts": "0.9.8",
+    "@innei/eslint-config-ts": "0.9.10",
     "@types/node": "18.15.3",
     "@types/qrcode-terminal": "^0.12.0",
     "bumpp": "9.0.0",
