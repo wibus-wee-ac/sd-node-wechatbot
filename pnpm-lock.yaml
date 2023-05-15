@@ -52,8 +52,8 @@ devDependencies:
     specifier: 13.2.0
     version: 13.2.0
   pnpm:
-    specifier: 7.29.3
-    version: 7.29.3
+    specifier: 8.5.1
+    version: 8.5.1
   prettier:
     specifier: 2.8.4
     version: 2.8.4
@@ -4639,9 +4639,9 @@ packages:
     engines: {node: '>=10.13.0'}
     dev: false
 
-  /pnpm@7.29.3:
-    resolution: {integrity: sha512-w4tVG3ZV1txgM2bp9/XMmqSYYO3qdhyMVdU8S0zegVvfB6SxNL+nxRq5t7hhw+yc+GrKegyZuIp9aWPhy6NNMA==}
-    engines: {node: '>=14.6'}
+  /pnpm@8.5.1:
+    resolution: {integrity: sha512-W6elL7Nww0a/MCICkzpkbxW6f99TQuX4DuJoDjWp39X08PKDkEpg4cgj3d6EtgYADcdQWl/eM8NdlLJVE3RgpA==}
+    engines: {node: '>=16.14'}
     hasBin: true
     dev: true
 
